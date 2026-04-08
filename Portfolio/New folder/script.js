@@ -3,7 +3,7 @@ const details = document.querySelector(".detail");
 const button = document.querySelector("button");
 
 async function getWeather(city) {
-  const apiKey = "3045dd712ffe6e702e3245525ac7fa38"; // 🔴 Put your API key here
+  const apiKey = "3045dd712ffe6e702e3245525ac7fa38"; 
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
 
   try {
@@ -26,7 +26,7 @@ async function getWeather(city) {
   }
 }
 
-// Button click
+
 button.addEventListener("click", () => {
   const city = input.value.trim();
   if (city) {
@@ -34,7 +34,7 @@ button.addEventListener("click", () => {
   }
 });
 
-// Enter key support
+
 input.addEventListener("keypress", (e) => {
   if (e.key === "Enter") {
     button.click();
@@ -42,5 +42,5 @@ input.addEventListener("keypress", (e) => {
   }
 });
 
-// Default load
+
 getWeather(input.value);
